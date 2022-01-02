@@ -129,6 +129,12 @@ nmap <leader>p :!black %<CR>
 nmap <leader><F5> :!%:p<CR>
 
 "  --------------------------------------------------------------------------------
+"  Helper Functions
+"  --------------------------------------------------------------------------------
+
+runtime functions.vim
+
+"  --------------------------------------------------------------------------------
 "  Plugins
 "  --------------------------------------------------------------------------------
 
@@ -152,6 +158,8 @@ end
     runtime plugins/_vim-test.vim
     runtime plugins/_treesitter.vim
     runtime plugins/_lsp.vim
+    runtime plugins/_vimwiki.vim
+    runtime plugins/_marks.vim
     
     " disable in favor of nvim lsp
     " runtime plugins/_coc.vim

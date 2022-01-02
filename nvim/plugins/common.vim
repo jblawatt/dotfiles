@@ -10,7 +10,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
-Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-surround'
 Plug 'mhartington/formatter.nvim'
 
@@ -29,4 +28,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'axvr/org.vim'
 
 Plug 'blindFS/vim-taskwarrior'
+Plug 'tools-life/taskwiki'
 
+Plug 'chentau/marks.nvim'
