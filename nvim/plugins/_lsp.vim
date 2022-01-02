@@ -8,6 +8,9 @@ Plug 'kyazdani42/nvim-web-devicons'     " icons
 Plug 'folke/trouble.nvim'               " list errors in split buffer
 Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
 Plug 'ray-x/navigator.lua'
+Plug 'ray-x/lsp_signature.nvim'
+" Plug 'simrat39/symbols-outline.nvim'
+Plug 'liuchengxu/vista.vim'
 
 function _setupLspRoot()
 lua <<EOF
@@ -123,10 +126,17 @@ EOF
 endfunction
 
 
+function _setupSignature()
+lua <<EOF
+require "lsp_signature".setup()
+EOF
+endfunction
+
 " initialize after plugins loaded
 augroup LspConfig
     autocmd!
     autocmd User PlugLoaded call _setupLspRoot()
     autocmd User PlugLoaded call _setupTrouble()
     autocmd User PlugLoaded call _setupNavigator()
+    autocmd User PlugLoaded call _setupSignature()
 augroup END
