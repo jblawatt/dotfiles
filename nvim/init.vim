@@ -161,6 +161,7 @@ end
     runtime plugins/_vimwiki.vim
     runtime plugins/_marks.vim
     runtime plugins/_autosave.vim
+    runtime plugins/_luasnip.vim
     
     " disable in favor of nvim lsp
     " runtime plugins/_coc.vim
