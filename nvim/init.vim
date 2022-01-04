@@ -30,6 +30,8 @@ set list
 set listchars=tab:▸\ ,trail:·
 
 if has("nvim")
+    let &t_8f = "\e[38;2;%lu;%lu;%lum"
+    let &t_8b = "\e[48;2;%lu;%lu;%lum"
     set termguicolors
     set signcolumn=yes:2
     set wildmode=longest:full,full
