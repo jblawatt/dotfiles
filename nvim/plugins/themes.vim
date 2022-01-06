@@ -72,5 +72,6 @@ Plug 'lunarvim/darkplus.nvim'
 if has("nvim")
     Plug 'folke/tokyonight.nvim'
     Plug 'Mofiqul/vscode.nvim'
+    Plug 'EdenEast/nightfox.nvim'
 end
 
