@@ -64,6 +64,10 @@ set wildmenu
 " autoreload changes
 set autoread
 
+" split the right way
+set splitbelow
+set splitright
+
 " ---------------------------------------------------------------------------------
 "  GUI Settings
 " ---------------------------------------------------------------------------------

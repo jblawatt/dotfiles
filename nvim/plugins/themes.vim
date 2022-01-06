@@ -73,5 +73,6 @@ if has("nvim")
     Plug 'folke/tokyonight.nvim'
     Plug 'Mofiqul/vscode.nvim'
     Plug 'EdenEast/nightfox.nvim'
+    Plug 'rose-pine/neovim'
 end
 
