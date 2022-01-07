@@ -99,13 +99,21 @@ if has("nvim")
     \ 'hint': 'orange',
     \ 'error': '#ff0000'
     \ }
+
+    autocmd User PlugLoaded ++nested colorscheme jellybeans
+
 end
 
+if has("nvim") && (exists("g:nvui") || exists("g:goneovim"))
+    set linespace=3
+    " set guifont=BlexMono\ Nerd\ Font:h14
+    set guifont=CaskaydiaCove\ Nerd\ Font:h14
+end
 
 " set background to transparent in terminal if colorscheme changed
 " autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE
 " autocmd User PlugLoaded ++nested colorscheme neuromancer
-autocmd User PlugLoaded ++nested colorscheme default
+" autocmd User PlugLoaded ++nested colorscheme default
 
 "  --------------------------------------------------------------------------------
 "  Key Bindings
