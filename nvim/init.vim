@@ -156,10 +156,11 @@ end
 
     "plugins with extended config
     runtime plugins/_fzf.vim
-    runtime plugins/_airline.vim
+    " runtime plugins/_airline.vim
     runtime plugins/_gitgutter.vim
     runtime plugins/_heritage.vim
-    runtime plugins/_nerdtree.vim
+    " runtime plugins/_nerdtree.vim
+    runtime plugins/_nvim_tree.vim
     runtime plugins/_quickscope.vim
     runtime plugins/_vim-test.vim
     runtime plugins/_treesitter.vim
@@ -171,7 +172,7 @@ end
     
     " disable in favor of nvim lsp
     " runtime plugins/_coc.vim
-    " runtime plugins/_lightline.vim
+    runtime plugins/_lightline.vim
 
 call plug#end()
 

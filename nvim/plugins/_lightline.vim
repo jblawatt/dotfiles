@@ -1,5 +1,5 @@
 Plug 'itchyny/lightline.vim'
 
 let g:lightline = {
-    \ 'colorscheme': 'papercolor'
+    \ 'colorscheme': 'jellybeans'
   \ }

@@ -1,7 +1,6 @@
 Plug 'neovim/nvim-lspconfig'            " default config
 Plug 'williamboman/nvim-lsp-installer'  " helper for installing lsp
 
-Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -17,7 +16,7 @@ Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
 Plug 'ray-x/navigator.lua'
 Plug 'ray-x/lsp_signature.nvim'
 " Plug 'simrat39/symbols-outline.nvim'
-Plug 'liuchengxu/vista.vim'
+" Plug 'liuchengxu/vista.vim'
 
 function _setupLspRoot()
 lua <<EOF
