@@ -161,6 +161,7 @@ end
     runtime plugins/_heritage.vim
     " runtime plugins/_nerdtree.vim
     runtime plugins/_nvim_tree.vim
+    runtime plugins/_neogit.vim
     runtime plugins/_quickscope.vim
     runtime plugins/_vim-test.vim
     runtime plugins/_treesitter.vim
