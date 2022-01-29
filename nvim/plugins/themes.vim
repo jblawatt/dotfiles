@@ -70,6 +70,7 @@ Plug 'Arc0re/cyberpunk.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'savq/melange'
 Plug 'lunarvim/darkplus.nvim'
+Plug 'idbrii/vim-sandydune'
 
 if has("nvim")
     Plug 'folke/tokyonight.nvim'
