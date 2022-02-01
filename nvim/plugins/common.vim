@@ -31,3 +31,6 @@ Plug 'blindFS/vim-taskwarrior'
 Plug 'tools-life/taskwiki'
 
 Plug 'chentau/marks.nvim'
+Plug 'vifm/vifm.vim'
+
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }

@@ -107,7 +107,8 @@ end
 if has("nvim") && (exists("g:nvui") || exists("g:goneovim"))
     set linespace=3
     " set guifont=BlexMono\ Nerd\ Font:h14
-    set guifont=CaskaydiaCove\ Nerd\ Font:h14
+    " set guifont=CaskaydiaCove\ Nerd\ Font:h14
+    set guifont=Lekton\ Nerd\ Font:h16
 end
 
 " set background to transparent in terminal if colorscheme changed
@@ -125,10 +126,10 @@ nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
 " Move window
-map sh <C-w>h
-map sk <C-w>k
-map sj <C-w>j
-map sl <C-w>l
+" map sh <C-w>h
+" map sk <C-w>k
+" map sj <C-w>j
+" map sl <C-w>l
 
 " Reselect visual selection after indenting
 vnoremap < <gv
@@ -162,7 +163,7 @@ end
     runtime plugins/themes.vim
     runtime plugins/languages.vim
 
-    "plugins with extended config
+    " plugins with extended config
     runtime plugins/_fzf.vim
     " runtime plugins/_airline.vim
     runtime plugins/_gitgutter.vim

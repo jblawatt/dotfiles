@@ -3,12 +3,18 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 
 function _setupNvimTree()
+
+nmap <leader>n :NvimTreeToggle<CR>
+nmap <leader>N :NvimTreeFocus<CR>
+nmap <leader>nf :NvimTreeFind<CR>
+nmap <leader>nm :NvimTreeMirror<CR>
+
 lua <<EOF
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require'nvim-tree'.setup {
-  disable_netrw       = false,
-  hijack_netrw        = false,
+  disable_netrw       = false, -- default true
+  hijack_netrw        = false, -- default true
   open_on_setup       = false,
   ignore_ft_on_setup  = {},
   auto_close          = false,
