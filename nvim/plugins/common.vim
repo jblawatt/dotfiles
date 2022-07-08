@@ -37,3 +37,4 @@ Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'NTBBloodbath/rest.nvim'
+Plug 'dense-analysis/ale'

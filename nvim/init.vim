@@ -194,6 +194,7 @@ end
     " runtime plugins/_marks.vim
     runtime plugins/_autosave.vim
     runtime plugins/_lightline.vim
+    runtime plugins/_harpoon.vim
     
     " disable in favor of nvim lsp
     " runtime plugins/_coc.vim
