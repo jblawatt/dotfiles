@@ -8,7 +8,7 @@ Plug 'xolox/vim-colorscheme-switcher'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-polyglot'
 " Plug 'honza/vim-snippets'
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-surround'
 Plug 'mhartington/formatter.nvim'
@@ -34,3 +34,6 @@ Plug 'chentau/marks.nvim'
 Plug 'vifm/vifm.vim'
 
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'NTBBloodbath/rest.nvim'

@@ -13,7 +13,7 @@ Plug 'folke/lsp-colors.nvim'            " ??
 Plug 'kyazdani42/nvim-web-devicons'     " icons
 Plug 'folke/trouble.nvim'               " list errors in split buffer
 Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
-Plug 'ray-x/navigator.lua'
+" Plug 'ray-x/navigator.lua'
 Plug 'ray-x/lsp_signature.nvim'
 " Plug 'simrat39/symbols-outline.nvim'
 " Plug 'liuchengxu/vista.vim'
@@ -112,20 +112,34 @@ lua <<EOF
       end,
     },
     mapping = {
-      ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-      ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-      ['<C-e>'] = cmp.mapping({
-        i = cmp.mapping.abort(),
-        c = cmp.mapping.close(),
-      }),
+
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ['<C-p>'] = cmp.mapping({
+        i = cmp.mapping.select_prev_item(),
+      }),
+      ['<C-n>'] = cmp.mapping({
+        i = cmp.mapping.select_next_item(),
+      }),
+      -- ['<C-n>'] = cmp.mapping.select_next_item(),
+
+      -- ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+      -- ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+      -- ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+      -- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+      -- ['<C-e>'] = cmp.mapping({
+      --   i = cmp.mapping.abort(),
+      --   c = cmp.mapping.close(),
+      -- }),
+      -- ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     },
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'vsnip' }, -- For vsnip users.
+      { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
@@ -164,6 +178,6 @@ augroup LspConfig
     autocmd User PlugLoaded call _setupLspRoot()
     autocmd User PlugLoaded call _setupCmp()
     autocmd User PlugLoaded call _setupTrouble()
-    autocmd User PlugLoaded call _setupNavigator()
+    " autocmd User PlugLoaded call _setupNavigator()
     autocmd User PlugLoaded call _setupSignature()
 augroup END

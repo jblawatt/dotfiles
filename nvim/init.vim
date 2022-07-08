@@ -72,6 +72,7 @@ set splitright
 "  GUI Settings
 " ---------------------------------------------------------------------------------
 
+
 if has("gui_running")
     set guioptions-=m  " no menu
     set guioptions-=T  " no toolbar
@@ -100,22 +101,32 @@ if has("nvim")
     \ 'error': '#ff0000'
     \ }
 
-    autocmd User PlugLoaded ++nested colorscheme jellybeans
-
+    autocmd User PlugLoaded ++nested colorscheme default
+    autocmd User PlugLoaded ++nested highlight Pmenu ctermbg=black guibg=black
+    " autocmd User PlugLoaded ++nested highlight Pmenu ctermbg=gray guibg=gray
+    " autocmd User PlugLoaded ++nested set background=
 end
+
+let g:vscode_style = "dark"
 
 if has("nvim") && (exists("g:nvui") || exists("g:goneovim"))
     set linespace=3
     " set guifont=BlexMono\ Nerd\ Font:h14
     " set guifont=CaskaydiaCove\ Nerd\ Font:h14
-    set guifont=Lekton\ Nerd\ Font:h16
+    " set guifont=Lekton\ Nerd\ Font:h16
+    set guifont=Iosevka\ Nerd\ Font:h14
+    " set guifont=MesloLGM\ Nerd\ Font:h13
+    " set guifont=ProFontIIx\ Nerd\ Font:h12
+    " set guifont=Anonymice\ Nerd\ Font:h14
+
 end
 
 " set background to transparent in terminal if colorscheme changed
 " autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE
 " autocmd User PlugLoaded ++nested colorscheme neuromancer
 " autocmd User PlugLoaded ++nested colorscheme default
-
+autocmd User PlugLoaded ++nested colorscheme vimterial_dark
+" autocmd User PlugLoaded ++nested lua require("material.functions").change_style("darker") 
 "  --------------------------------------------------------------------------------
 "  Key Bindings
 "  --------------------------------------------------------------------------------
@@ -142,6 +153,8 @@ nmap <leader>p :!black %<CR>
 
 " Execute Current File
 nmap <leader><F5> :!%:p<CR>
+
+nmap <C-p> :Commands<CR>
 
 "  --------------------------------------------------------------------------------
 "  Helper Functions
@@ -170,19 +183,20 @@ end
     runtime plugins/_heritage.vim
     " runtime plugins/_nerdtree.vim
     runtime plugins/_nvim_tree.vim
-    runtime plugins/_neogit.vim
+    " runtime plugins/_neogit.vim
     runtime plugins/_quickscope.vim
     runtime plugins/_vim-test.vim
     runtime plugins/_treesitter.vim
-    runtime plugins/_lsp.vim
-    runtime plugins/_vimwiki.vim
-    runtime plugins/_marks.vim
-    runtime plugins/_autosave.vim
     runtime plugins/_luasnip.vim
+    runtime plugins/_coc.vim
+    " runtime plugins/_lsp.vim
+    runtime plugins/_vimwiki.vim
+    " runtime plugins/_marks.vim
+    runtime plugins/_autosave.vim
+    runtime plugins/_lightline.vim
     
     " disable in favor of nvim lsp
     " runtime plugins/_coc.vim
-    runtime plugins/_lightline.vim
 
 call plug#end()
 

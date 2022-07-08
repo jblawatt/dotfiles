@@ -17,7 +17,6 @@ require'nvim-tree'.setup {
   hijack_netrw        = false, -- default true
   open_on_setup       = false,
   ignore_ft_on_setup  = {},
-  auto_close          = false,
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = false,
@@ -45,11 +44,12 @@ require'nvim-tree'.setup {
   },
   filters = {
     dotfiles = false,
-    custom = {}
+    custom = {},
+    exclude = {"__pycache__"}
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 500,
   },
   view = {
