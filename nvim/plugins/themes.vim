@@ -9,6 +9,21 @@ end
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'YorickPeterse/vim-paper'
 " Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'gosukiwi/vim-atom-dark'
+" Plug 'NLKNguyen/papercolor-theme'
+" Plug 'sonph/onehalf'
+Plug 'ayu-theme/ayu-vim'
+
+"Big Theme Pack
+Plug 'flazz/vim-colorschemes'
+Plug 'morhetz/gruvbox'
+" Plug 'mkarmona/materialbox'
+Plug 'mkarmona/colorsbox'
+Plug 'hewo/vim-colorscheme-deepsea'
+" Plug 'scrooloose/syntastic'
+" Plug 'dense-analysis/ale'
+" Plug 'joshdick/onedark.vim'
 " Plug 'atelierbram/vim-colors_duotones'
 " Plug 'aunsira/macvim-light'
 " Plug 'cesardeazevedo/Fx-ColorScheme'
@@ -71,4 +86,27 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'vim-scripts/darkspectrum'
 Plug 'yassinebridi/vim-purpura'
 Plug 'marko-cerovac/material.nvim'
+Plug 'idbrii/vim-sandydune'
 let g:material_style = "darker"
+
+if has("nvim")
+    Plug 'folke/tokyonight.nvim'
+    Plug 'Mofiqul/vscode.nvim'
+    Plug 'EdenEast/nightfox.nvim'
+    Plug 'rose-pine/neovim'
+end
+
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'shaunsingh/moonlight.nvim'
+Plug 'navarasu/onedark.nvim'
+
+
+" function _setupTheme()
+"     let g:onedark_config = {'style': 'darker'}
+" endfunction
+" 
+" 
+" augroup ThemeConfig
+"     autocmd!
+"     autocmd User PlugLoaded call _setupTheme()
+" augroup END
