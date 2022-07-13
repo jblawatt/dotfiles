@@ -13,14 +13,9 @@ end
 " Plug 'gosukiwi/vim-atom-dark'
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'sonph/onehalf'
-Plug 'ayu-theme/ayu-vim'
+" Plug 'ayu-theme/ayu-vim'
 
-"Big Theme Pack
-Plug 'flazz/vim-colorschemes'
-Plug 'morhetz/gruvbox'
 " Plug 'mkarmona/materialbox'
-Plug 'mkarmona/colorsbox'
-Plug 'hewo/vim-colorscheme-deepsea'
 " Plug 'scrooloose/syntastic'
 " Plug 'dense-analysis/ale'
 " Plug 'joshdick/onedark.vim'
@@ -43,6 +38,11 @@ Plug 'hewo/vim-colorscheme-deepsea'
 " Plug 'tjammer/focusedpanic.vim'
 " Plug 'xero/blaquemagick.vim'
 " Plug 'roosta/vim-srcery'
+" Plug 'encody/vim-colors' " lyla
+
+Plug 'morhetz/gruvbox'
+Plug 'mkarmona/colorsbox'
+Plug 'hewo/vim-colorscheme-deepsea'
 Plug 'Arc0re/cyberpunk.vim'
 Plug 'DavidBachmann/vim-punk-colorscheme'
 Plug 'Lokaltog/vim-monotone'
@@ -58,16 +58,12 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'dracula/vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'embark-theme/vim', { 'as': 'embark' }
-Plug 'encody/vim-colors' " lyla
-Plug 'flazz/vim-colorschemes'
 Plug 'haxibami/urara.vim'
 Plug 'hewo/vim-colorscheme-deepsea'
 Plug 'idbrii/vim-sandydune'
 Plug 'jacoborus/tender'
-Plug 'jacoborus/tender.vim'
 Plug 'jaredgorski/SpaceCamp'
 Plug 'joshdick/onedark.vim'
-" Plug 'kaicataldo/material.vim'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'larsbs/vimterial_dark'
 Plug 'lucasprag/simpleblack'
@@ -85,28 +81,29 @@ Plug 'tjammer/focusedpanic.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-scripts/darkspectrum'
 Plug 'yassinebridi/vim-purpura'
-Plug 'marko-cerovac/material.nvim'
 Plug 'idbrii/vim-sandydune'
-let g:material_style = "darker"
-
-if has("nvim")
-    Plug 'folke/tokyonight.nvim'
-    Plug 'Mofiqul/vscode.nvim'
-    Plug 'EdenEast/nightfox.nvim'
-    Plug 'rose-pine/neovim'
-end
-
+Plug 'marko-cerovac/material.nvim'
+Plug 'folke/tokyonight.nvim'
+Plug 'Mofiqul/vscode.nvim'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'rose-pine/neovim'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'shaunsingh/moonlight.nvim'
 Plug 'navarasu/onedark.nvim'
 
+"Big Theme Pack.
+Plug 'flazz/vim-colorschemes'
 
-" function _setupTheme()
-"     let g:onedark_config = {'style': 'darker'}
-" endfunction
-" 
-" 
-" augroup ThemeConfig
-"     autocmd!
-"     autocmd User PlugLoaded call _setupTheme()
-" augroup END
+let g:material_style = "darker"
+
+function _setupTheme()
+" lua <<EOF
+" require("material.functions").change_style("darker")
+" EOF
+endfunction
+  
+  
+augroup ThemeConfig
+    autocmd!
+    autocmd User PlugLoaded call _setupTheme()
+augroup END
