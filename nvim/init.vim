@@ -123,7 +123,7 @@ end
 
 " set background to transparent in terminal if colorscheme changed
 " autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE
-autocmd User PlugLoaded ++nested colorscheme default
+autocmd User PlugLoaded ++nested colorscheme luna
 autocmd User PlugLoaded ++nested highlight Pmenu ctermbg=black guibg=black
 
 "  --------------------------------------------------------------------------------
@@ -176,7 +176,7 @@ end
     runtime plugins/languages.vim
 
     "plugins with extended config
-    runtime plugins/_fzf.vim
+    " runtime plugins/_fzf.vim
     runtime plugins/_gitgutter.vim
     runtime plugins/_heritage.vim
     runtime plugins/_nvim_tree.vim
@@ -192,9 +192,9 @@ end
     runtime plugins/_lightline.vim
     runtime plugins/_harpoon.vim
     runtime plugins/_luasnip.vim
-    " runtime plugins/_neogit.vim
+    runtime plugins/_neogit.vim
     " runtime plugins/_nerdtree.vim
-    " runtime plugins/_telescope.vim
+    runtime plugins/_telescope.vim
     " disable in favor of nvim lsp
     " runtime plugins/_coc.vim
 

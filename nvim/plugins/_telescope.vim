@@ -15,17 +15,20 @@ lua <<EOF
     defaults = {
         -- Default configuration for telescope goes here:
         -- config_key = value,
-        layout_config = {
-            vertical = { width = 0.5 }
-            -- other layout configuration here
-        },
+        -- layout_config = {
+        --     vertical = { width = 0.5 }
+        --     -- other layout configuration here
+        -- },
+        layout_strategy = 'horizontal',
+        layout_config = { width = 0.95 },
+
         mappings = {
-        i = {
-            -- map actions.which_key to <C-h> (default: <C-/>)
-            -- actions.which_key shows the mappings for your picker,
-            -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-            ["<C-h>"] = "which_key"
-        }
+            i = {
+                -- map actions.which_key to <C-h> (default: <C-/>)
+                -- actions.which_key shows the mappings for your picker,
+                -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+                ["<C-h>"] = "which_key"
+            }
         }
     },
     pickers = {
