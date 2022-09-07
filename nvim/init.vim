@@ -114,10 +114,10 @@ if has("nvim") && (exists("g:nvui") || exists("g:goneovim"))
     " set guifont=BlexMono\ Nerd\ Font:h14
     " set guifont=CaskaydiaCove\ Nerd\ Font:h14
     " set guifont=Lekton\ Nerd\ Font:h16
-    set guifont=Iosevka\ Nerd\ Font:h14
+    " set guifont=Iosevka\ Nerd\ Font:h14
     " set guifont=MesloLGM\ Nerd\ Font:h13
     " set guifont=ProFontIIx\ Nerd\ Font:h12
-    " set guifont=Anonymice\ Nerd\ Font:h14
+    set guifont=Anonymice\ Nerd\ Font:h16
 
 end
 
