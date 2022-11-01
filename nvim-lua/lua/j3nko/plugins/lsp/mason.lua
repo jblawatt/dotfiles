@@ -25,8 +25,8 @@ mason_lspconfig.setup({
 		"tsserver",
 		"html",
 		"cssls",
-		"tailwindcss",
-		"sumneko_lua",
+		"pyright",
+		"yamlls",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
