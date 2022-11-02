@@ -79,15 +79,6 @@ if has("gui_running")
     set cursorline
     set noeb vb t_vb=
     set vb t_vb=
-
-    if has("win32")
-        set guifont=CaskaydiaCove_Nerd_Font_Mono:h10
-    end
-end
-
-if has("nvim") && exists("g:GuiLoaded") && has("g:GuiLoaded")
-    GuiFont Anonymice Nerd Font Mono:h16
-    GuiTabline 0
 end
 
 if has("nvim")
@@ -101,8 +92,8 @@ if has("nvim")
     \ 'error': '#ff0000'
     \ }
 
-    autocmd User PlugLoaded ++nested colorscheme default
-    autocmd User PlugLoaded ++nested highlight Pmenu ctermbg=black guibg=black
+    " autocmd User PlugLoaded ++nested colorscheme default
+    " autocmd User PlugLoaded ++nested highlight Pmenu ctermbg=black guibg=black
     " autocmd User PlugLoaded ++nested highlight Pmenu ctermbg=gray guibg=gray
     " autocmd User PlugLoaded ++nested set background=
 end
@@ -117,8 +108,9 @@ if has("nvim") && (exists("g:nvui") || exists("g:goneovim"))
     " set guifont=Iosevka\ Nerd\ Font:h14
     " set guifont=MesloLGM\ Nerd\ Font:h13
     " set guifont=ProFontIIx\ Nerd\ Font:h12
-    set guifont=Anonymice\ Nerd\ Font:h16
-
+    " set guifont=Anonymice\ Nerd\ Font:h16
+    " set guifont=Monoid\ Nerd\ Font:h14
+    set guifont=CodeNewRoman\ Nerd\ Font:h14
 end
 
 " set background to transparent in terminal if colorscheme changed
