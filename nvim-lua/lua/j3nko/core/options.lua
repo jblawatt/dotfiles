@@ -40,3 +40,15 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
+
+-- make search case insesitive
+opt.hlsearch = true
+opt.incsearch = true
+opt.ignorecase = true
+opt.smartcase = true
+
+--- autoreload changes
+-- opt.autoreload = true
+
+-- misc
+opt.pastetoggle = "<F2>"

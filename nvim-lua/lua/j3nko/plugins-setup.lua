@@ -50,7 +50,7 @@ return packer.startup(function(use)
     use("EdenEast/nightfox.nvim")
     use("folke/tokyonight.nvim")
 
-	use("szw/vim-maximizer") -- maximizes and restores current window
+    use("szw/vim-maximizer") -- maximizes and restores current window
 
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
@@ -86,19 +86,22 @@ return packer.startup(function(use)
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
-	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+	-- use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
 
 	-- managing & installing lsp servers, linters & formatters
-	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
-	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+	-- use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+	-- use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
 	-- configuring lsp servers
-	use("neovim/nvim-lspconfig") -- easily configure language servers
-	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
-	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
-	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	-- use("neovim/nvim-lspconfig") -- easily configure language servers
+    -- use("williamboman/nvim-lsp-installer")
+	-- use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+	-- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	-- use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+	-- use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+
+    use({"neoclide/coc.nvim", branch = "release", run = "yarn install --frozen-lockfile"})
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
