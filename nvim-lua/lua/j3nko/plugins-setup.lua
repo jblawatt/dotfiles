@@ -122,6 +122,8 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+    use("907th/vim-auto-save")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

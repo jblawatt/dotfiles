@@ -52,3 +52,6 @@ opt.smartcase = true
 
 -- misc
 opt.pastetoggle = "<F2>"
+
+
+

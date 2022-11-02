@@ -13,11 +13,11 @@ require("j3nko.plugins.nvim-cmp")
 require("j3nko.plugins.lualine")
 require("j3nko.plugins.telescope")
 
-require("j3nko.plugins.nvim-cmp")
-
+-- require("j3nko.plugins.nvim-cmp")
 -- require("j3nko.plugins.lsp.lspconfig")
 -- require("j3nko.plugins.lsp.lspsaga")
 -- require("j3nko.plugins.lsp.mason")
 -- require("j3nko.plugins.lsp.null-ls")
 
 require("j3nko.plugins.coc")
+require("j3nko.plugins.autosave")
