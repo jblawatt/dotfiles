@@ -1,10 +1,4 @@
 
-local status, _ = pcall(require, "coc")
-if not status then
-    print("no coc")
-    return
-end
-
 -- Some servers have issues with backup files, see #649.
 vim.opt.backup = false
 vim.opt.writebackup = false
