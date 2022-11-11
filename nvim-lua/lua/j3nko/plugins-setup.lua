@@ -34,26 +34,29 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-    use("xolox/vim-misc")
-    use("xolox/vim-colorscheme-switcher")
-    use("tpope/vim-fugitive")
+        use("xolox/vim-misc")
+        use("xolox/vim-colorscheme-switcher")
+        use("tpope/vim-fugitive")
 
-    -- multi cursor
-    use("mg979/vim-visual-multi")
+        -- multi cursor
+        use("mg979/vim-visual-multi")
 
-    use("airblade/vim-gitgutter")
+        use("airblade/vim-gitgutter")
 
-    use("nvim-lua/plenary.nvim")
-    use("ThePrimeagen/harpoon")
+        use("nvim-lua/plenary.nvim")
+        use("ThePrimeagen/harpoon")
 
-    -- colorshemes
-    use("EdenEast/nightfox.nvim")
-    use("folke/tokyonight.nvim")
-    use("bluz71/vim-moonfly-colors")
-    use("charkuils/vim-poe")
-    use("dracula/vim")
+        -- colorshemes
+        use("EdenEast/nightfox.nvim")
+        use("folke/tokyonight.nvim")
+        use("bluz71/vim-moonfly-colors")
+        use("charkuils/vim-poe")
+        use("dracula/vim")
+        use("sjl/badwolf")
+        use("morhetz/gruvbox")
+        use{"https://gitlab.com/madyanov/gruber.vim", as="madyanov-gruber-vim"}
 
-    use("szw/vim-maximizer") -- maximizes and restores current window
+        use("szw/vim-maximizer") -- maximizes and restores current window
 
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
@@ -64,16 +67,16 @@ return packer.startup(function(use)
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
-    use("Xuyuanp/nerdtree-git-plugin")
-    use("ryanoasis/vim-devicons")
-    use("vwxyutarooo/nerdtree-devicons-syntax")
-    use("tiagofumo/vim-nerdtree-syntax-highlight")
+        use("Xuyuanp/nerdtree-git-plugin")
+        use("ryanoasis/vim-devicons")
+        use("vwxyutarooo/nerdtree-devicons-syntax")
+        use("tiagofumo/vim-nerdtree-syntax-highlight")
 
-    -- ...
-    use("unblevable/quick-scope")
+        -- ...
+        use("unblevable/quick-scope")
 
-    -- vim unittest
-    use("vim-test/vim-test")
+        -- vim unittest
+        use("vim-test/vim-test")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
@@ -98,13 +101,13 @@ return packer.startup(function(use)
 
 	-- configuring lsp servers
 	-- use("neovim/nvim-lspconfig") -- easily configure language servers
-    -- use("williamboman/nvim-lsp-installer")
+        -- use("williamboman/nvim-lsp-installer")
 	-- use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	-- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	-- use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	-- use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
-    use({"neoclide/coc.nvim", branch = "release", run = "yarn install --frozen-lockfile"})
+        use({"neoclide/coc.nvim", branch = "release", run = "yarn install --frozen-lockfile"})
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
@@ -125,9 +128,10 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-    use("907th/vim-auto-save")
+        use("907th/vim-auto-save")
 
-    use("towolf/vim-helm")
+        use("towolf/vim-helm")
+        use("fatih/vim-go")
 
 	if packer_bootstrap then
 		require("packer").sync()
