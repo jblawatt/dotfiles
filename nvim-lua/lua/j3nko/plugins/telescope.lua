@@ -40,3 +40,4 @@ vim.keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git
 vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
 vim.keymap.set("n", "<C-p>", "<cmd>Telescope commands<cr>")
+--  vim.api.nvim_create_user_command("Colors", "<cmd>Telescope colorschemes<cr>")

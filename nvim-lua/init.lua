@@ -1,6 +1,7 @@
 require("j3nko.plugins-setup")
 require("j3nko.core.options")
 require("j3nko.core.keymaps")
+require("j3nko.core.user-commands")
 require("j3nko.core.colorscheme")
 
 require("j3nko.plugins.gitgutter")

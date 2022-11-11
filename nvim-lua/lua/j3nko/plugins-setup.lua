@@ -49,6 +49,9 @@ return packer.startup(function(use)
     -- colorshemes
     use("EdenEast/nightfox.nvim")
     use("folke/tokyonight.nvim")
+    use("bluz71/vim-moonfly-colors")
+    use("charkuils/vim-poe")
+    use("dracula/vim")
 
     use("szw/vim-maximizer") -- maximizes and restores current window
 
@@ -123,6 +126,8 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
     use("907th/vim-auto-save")
+
+    use("towolf/vim-helm")
 
 	if packer_bootstrap then
 		require("packer").sync()
