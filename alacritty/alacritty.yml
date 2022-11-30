@@ -1,0 +1,12 @@
+
+import:
+  - ~/.config/alacritty/alacritty-theme/themes/base16_default_dark.yaml
+
+font:
+  normal:
+    # family: mononoki Nerd Font Mono
+    family: mplus NFM
+      # style: Regular
+    style: Bold
+
+  size: 11.0
