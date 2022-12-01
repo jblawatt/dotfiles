@@ -43,19 +43,25 @@ return packer.startup(function(use)
 
     use("airblade/vim-gitgutter")
 
-    -- use("nvim-lua/plenary.nvim")
     use("ThePrimeagen/harpoon")
 
     -- colorshemes
     use("EdenEast/nightfox.nvim")
     use("folke/tokyonight.nvim")
     use("bluz71/vim-moonfly-colors")
-    use("charkuils/vim-poe")
+    -- use("charkuils/vim-poe")
     use("dracula/vim")
     use("sjl/badwolf")
+    use("jacoborus/tender.vim")
     use("morhetz/gruvbox")
     use{"https://gitlab.com/madyanov/gruber.vim", as="madyanov-gruber-vim"}
     use{"nyoom-engineering/oxocarbon.nvim"}
+
+    use{ "catppuccin/nvim", as = "catppuccin" }
+    -- use("shaunsingh/nyoom.nvim")
+    use("savq/melange")
+
+    -- < colorshemes
 
     use("szw/vim-maximizer") -- maximizes and restores current window
 

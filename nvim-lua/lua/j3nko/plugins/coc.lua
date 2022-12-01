@@ -108,7 +108,7 @@ keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
 
 
 -- Apply AutoFix to problem on the current line.
-keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
+keyset("n", "<leader>QF", "<Plug>(coc-fix-current)", opts)
 
 
 -- Run the Code Lens action on the current line.

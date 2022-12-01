@@ -56,3 +56,4 @@ opt.pastetoggle = "<F2>"
 -- do not write swp files
 opt.swapfile = false
 
+vim.g.Guifont = "TerminessTTF Nerd Font:h16"

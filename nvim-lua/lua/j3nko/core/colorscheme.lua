@@ -2,6 +2,9 @@
 -- in case it isn't installed
 -- local colorscheme = "gruber"
 local colorscheme = "oxocarbon"
+-- local colorscheme = "poe"
+-- local colorscheme = "gruber"
+
 local status, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status then
 	print("Colorscheme not found!") -- print error if colorscheme not installed
