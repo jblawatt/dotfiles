@@ -6,6 +6,7 @@ end
 
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
 
 nvim_tree.setup({
   disable_netrw       = false, -- default true
@@ -44,7 +45,7 @@ nvim_tree.setup({
     timeout = 500,
   },
   view = {
-    width = 30,
+    width = 40,
     hide_root_folder = false,
     side = 'left',
     mappings = {

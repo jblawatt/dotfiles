@@ -14,6 +14,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 
+-- keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- 
 keymap.set("v", "<", "<gv", {remap = false})
@@ -24,3 +25,6 @@ keymap.set("v", ">", ">gv", {remap = false})
 -- -------------------
 keymap.set("n", "<C-w>z", ":MaximizerToggle<CR>") -- toggle split window maximization
 
+
+-- undotree
+keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")

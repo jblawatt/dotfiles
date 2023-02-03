@@ -4,21 +4,13 @@ local ensure_packer = function()
     local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
     if fn.empty(fn.glob(install_path)) > 0 then
         fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-        vim.cmd([[packadd packer.nvim]])
+        vim.cmd("packadd packer.nvim")
         return true
     end
     return false
 end
-local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
--- autocommand that reloads neovim and installs/updates/removes plugins
--- when file is saved
-vim.cmd([[ 
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
-  augroup end
-]])
+local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- import packer safely
 local status, packer = pcall(require, "packer")
@@ -42,7 +34,9 @@ return packer.startup(function(use)
     use("mg979/vim-visual-multi")
 
     use("airblade/vim-gitgutter")
+    use("mbbill/undotree")
 
+    -- use("nvim-lua/plenary.nvim") -- used by harpoon
     use("ThePrimeagen/harpoon")
 
     -- colorshemes
@@ -56,10 +50,12 @@ return packer.startup(function(use)
     use("morhetz/gruvbox")
     use{"https://gitlab.com/madyanov/gruber.vim", as="madyanov-gruber-vim"}
     use{"nyoom-engineering/oxocarbon.nvim"}
-
     use{ "catppuccin/nvim", as = "catppuccin" }
     -- use("shaunsingh/nyoom.nvim")
     use("savq/melange")
+    use("nyoom-engineering/nyoom.nvim")
+    use("Mofiqul/vscode.nvim")
+    use("marko-cerovac/material.nvim")
 
     -- < colorshemes
 
@@ -77,8 +73,8 @@ return packer.startup(function(use)
     use("nvim-tree/nvim-tree.lua")
     use("Xuyuanp/nerdtree-git-plugin")
     use("ryanoasis/vim-devicons")
-    use("vwxyutarooo/nerdtree-devicons-syntax")
-    use("tiagofumo/vim-nerdtree-syntax-highlight")
+    -- use("vwxyutarooo/nerdtree-devicons-syntax")
+    -- use("tiagofumo/vim-nerdtree-syntax-highlight")
 
     -- ...
     use("unblevable/quick-scope")
@@ -140,6 +136,13 @@ return packer.startup(function(use)
 
     use("towolf/vim-helm")
     use("fatih/vim-go")
+
+    -- use {
+    --     "folke/which-key.nvim",
+    --     config = function () 
+    --         require("which-key").setup()
+    --     end
+    -- }
 
     if packer_bootstrap then
         require("packer").sync()
