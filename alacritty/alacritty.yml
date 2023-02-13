@@ -5,8 +5,10 @@ import:
 font:
   normal:
     # family: mononoki Nerd Font Mono
-    family: mplus NFM
+    # family: mplus NFM
+    # family: monospace
+    family: Iosevka Term
       # style: Regular
     style: Bold
 
-  size: 11.0
+  size: 12.0
