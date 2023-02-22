@@ -14,5 +14,6 @@ require("j3nko.plugins.nvim-cmp")
 require("j3nko.plugins.lualine")
 require("j3nko.plugins.telescope")
 
-require("j3nko.plugins.coc")
+-- require("j3nko.plugins.coc")
+require("j3nko.plugins.lsp")
 require("j3nko.plugins.autosave")

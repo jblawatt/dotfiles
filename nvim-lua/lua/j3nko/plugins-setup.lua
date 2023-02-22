@@ -63,7 +63,7 @@ return packer.startup(function(use)
 
     -- essential plugins
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-    use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+    -- use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
     use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
     
     -- commenting with gc
@@ -111,8 +111,31 @@ return packer.startup(function(use)
     -- use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
     -- use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
-        use({"neoclide/coc.nvim", branch = "release", run = "yarn install --frozen-lockfile"})
+     --    use({"neoclide/coc.nvim", branch = "release", run = "yarn install --frozen-lockfile"})
 
+    use {
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v1.x',
+      requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},             -- Required
+        {'williamboman/mason.nvim'},           -- Optional
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},         -- Required
+        {'hrsh7th/cmp-nvim-lsp'},     -- Required
+        {'hrsh7th/cmp-buffer'},       -- Optional
+        {'hrsh7th/cmp-path'},         -- Optional
+        {'saadparwaiz1/cmp_luasnip'}, -- Optional
+        {'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+        -- Snippets
+        {'L3MON4D3/LuaSnip'},             -- Required
+        {'rafamadriz/friendly-snippets'}, -- Optional
+      }
+    }
+    
     -- formatting & linting
     use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
     use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
@@ -136,6 +159,8 @@ return packer.startup(function(use)
 
     use("towolf/vim-helm")
     use("fatih/vim-go")
+
+    use("LnL7/vim-nix")
 
     -- use {
     --     "folke/which-key.nvim",
