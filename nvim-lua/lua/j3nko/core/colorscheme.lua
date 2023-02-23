@@ -4,14 +4,11 @@
 -- local colorscheme = "oxocarbon"
 -- local colorscheme = "poe"
 -- local colorscheme = "gruber"
-
 -- local colorscheme = "gruber"
 -- local colorscheme = "material"
 -- local colorscheme = "ambiance"
 local colorscheme = "paramount"
 -- local colorscheme = "dracula"
-
--- local colorscheme = "oxocarbon"
 
 local status, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status then
