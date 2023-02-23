@@ -189,9 +189,9 @@ return packer.startup(function(use)
     -- }
 
     use("vifm/vifm.vim")
-
     use("mattn/emmet-vim")
     use("ap/vim-css-color")
+    use("junegunn/goyo.vim")
 
     if packer_bootstrap then
         require("packer").sync()
