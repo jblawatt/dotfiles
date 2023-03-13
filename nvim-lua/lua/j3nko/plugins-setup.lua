@@ -57,6 +57,12 @@ return packer.startup(function(use)
     use("Mofiqul/vscode.nvim")
     use("marko-cerovac/material.nvim")
 
+    use("kamykn/dark-theme.vim")
+    use("glortho/feral-vim")
+    use("nucl1d3/ambiance-vim")
+    use("nanotech/jellybeans.vim")
+    use("Alvarocz/vim-fresh")
+
     -- < colorshemes
 
     use("szw/vim-maximizer") -- maximizes and restores current window

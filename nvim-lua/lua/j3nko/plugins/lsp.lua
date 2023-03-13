@@ -11,7 +11,7 @@ lsp.ensure_installed({
     -- "tsserver",
     "yamlls",
     "taplo",
-    "nil_ls",
+    -- "nil_ls",
     "lua_ls",
     "remark_ls",
     "jsonls",
