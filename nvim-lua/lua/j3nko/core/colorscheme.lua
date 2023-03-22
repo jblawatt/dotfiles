@@ -7,7 +7,7 @@
 
 -- local colorscheme = "gruber"
 -- local colorscheme = "material"
-local colorscheme = "gruber"
+local colorscheme = "ambiance"
 -- local colorscheme = "dracula"
 
 -- local colorscheme = "oxocarbon"

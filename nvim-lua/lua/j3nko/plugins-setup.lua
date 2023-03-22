@@ -41,9 +41,9 @@ return packer.startup(function(use)
 
     -- colorshemes
     use("EdenEast/nightfox.nvim")
+
     use("folke/tokyonight.nvim")
     use("bluz71/vim-moonfly-colors")
-    -- use("charkuils/vim-poe")
     use("dracula/vim")
     use("sjl/badwolf")
     use("jacoborus/tender.vim")
@@ -51,7 +51,6 @@ return packer.startup(function(use)
     use{"https://gitlab.com/madyanov/gruber.vim", as="madyanov-gruber-vim"}
     use{"nyoom-engineering/oxocarbon.nvim"}
     use{ "catppuccin/nvim", as = "catppuccin" }
-    -- use("shaunsingh/nyoom.nvim")
     use("savq/melange")
     use("nyoom-engineering/nyoom.nvim")
     use("Mofiqul/vscode.nvim")
@@ -61,8 +60,15 @@ return packer.startup(function(use)
     use("glortho/feral-vim")
     use("nucl1d3/ambiance-vim")
     use("nanotech/jellybeans.vim")
-    use("Alvarocz/vim-fresh")
 
+    use("evilwaveforms/silenthill.vim")
+    use("andreasvc/vim-256noir")
+    use("hardselius/warlock")
+    use("conweller/endarkened.vim")
+    use("vim-scripts/kiss.vim")
+    use("kwsp/halcyon-neovim")
+    use("teloe/bland.vim")
+    use("perfectspr/dracula-vim")
     -- < colorshemes
 
     use("szw/vim-maximizer") -- maximizes and restores current window
