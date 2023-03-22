@@ -35,3 +35,11 @@ vim.diagnostic.config({
   severity_sort = false,
   float = true,
 })
+
+require("lspconfig").yamlls.setup{
+    settings = {
+        yaml = {
+            keyOrder = false
+        }
+    }
+}
