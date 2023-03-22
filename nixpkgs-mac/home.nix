@@ -24,12 +24,27 @@ in
         upkgs.zoxide
         upkgs.powershell
         upkgs.plantuml
+        upkgs.hugo
+        upkgs.gitlab-runner
+#         upkgs.kitty
     ];    
 
-    home.shellAliases = {
-        "z" = "zoxide";
-    };
+#     home.shellAliases = {
+#         "z" = "zoxide";
+#         "tf" = "terraform";
+#     };
 
-    programs.home-manager.enable = true;
+    # programs.home-manager.enable = true;
+
+    programs = {
+      home-manager.enable = true;
+      zsh = {
+        enable = false;
+        shellAliases = {
+          "z" = "zoxide";
+          "tf" = "terraform";
+        };
+      };
+    };
 
 }
