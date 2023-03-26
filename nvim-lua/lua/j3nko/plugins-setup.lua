@@ -69,6 +69,11 @@ return packer.startup(function(use)
     use("kwsp/halcyon-neovim")
     use("teloe/bland.vim")
     use("perfectspr/dracula-vim")
+    -- monochrome
+    use("owickstrom/vim-colors-paramount")
+    use("fxn/vim-monochrome")
+    use("n1ghtmare/noirblaze-vim")
+    use("axvr/photon.vim")
     -- < colorshemes
 
     use("szw/vim-maximizer") -- maximizes and restores current window
@@ -180,6 +185,8 @@ return packer.startup(function(use)
     --         require("which-key").setup()
     --     end
     -- }
+
+    use("vifm/vifm.vim")
 
     if packer_bootstrap then
         require("packer").sync()
