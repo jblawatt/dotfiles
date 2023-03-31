@@ -25,7 +25,7 @@ return packer.startup(function(use)
     use("wbthomason/packer.nvim")
 
     use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-
+    -- use("github/copilot.vim")
     use("xolox/vim-misc")
     use("xolox/vim-colorscheme-switcher")
     use("tpope/vim-fugitive")
@@ -48,9 +48,9 @@ return packer.startup(function(use)
     use("sjl/badwolf")
     use("jacoborus/tender.vim")
     use("morhetz/gruvbox")
-    use{"https://gitlab.com/madyanov/gruber.vim", as="madyanov-gruber-vim"}
-    use{"nyoom-engineering/oxocarbon.nvim"}
-    use{ "catppuccin/nvim", as = "catppuccin" }
+    use { "https://gitlab.com/madyanov/gruber.vim", as = "madyanov-gruber-vim" }
+    use { "nyoom-engineering/oxocarbon.nvim" }
+    use { "catppuccin/nvim", as = "catppuccin" }
     use("savq/melange")
     use("nyoom-engineering/nyoom.nvim")
     use("Mofiqul/vscode.nvim")
@@ -74,18 +74,19 @@ return packer.startup(function(use)
     use("fxn/vim-monochrome")
     use("n1ghtmare/noirblaze-vim")
     use("axvr/photon.vim")
+    use { "https://git.sr.ht/~toastal/sugilite256", branch = "trunk", rtp = "vim" }
     -- < colorshemes
 
     use("szw/vim-maximizer") -- maximizes and restores current window
 
     -- essential plugins
-    use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+    use("tpope/vim-surround")             -- add, delete, change surroundings (it's awesome)
     -- use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
     use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
-    
+
     -- commenting with gc
     use("numToStr/Comment.nvim")
-    
+
     -- file explorer
     use("nvim-tree/nvim-tree.lua")
     use("Xuyuanp/nerdtree-git-plugin")
@@ -104,15 +105,15 @@ return packer.startup(function(use)
 
     -- fuzzy finding w/ telescope
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-    use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+    use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })        -- fuzzy finder
 
     -- autocompletion
-    use("hrsh7th/nvim-cmp") -- completion plugin
+    use("hrsh7th/nvim-cmp")   -- completion plugin
     use("hrsh7th/cmp-buffer") -- source for text in buffer
-    use("hrsh7th/cmp-path") -- source for file system paths
+    use("hrsh7th/cmp-path")   -- source for file system paths
 
     -- snippets
-    use("L3MON4D3/LuaSnip") -- snippet engine
+    use("L3MON4D3/LuaSnip")             -- snippet engine
     -- use("saadparwaiz1/cmp_luasnip") -- for autocompletion
     use("rafamadriz/friendly-snippets") -- useful snippets
 
@@ -122,51 +123,52 @@ return packer.startup(function(use)
 
     -- configuring lsp servers
     -- use("neovim/nvim-lspconfig") -- easily configure language servers
-        -- use("williamboman/nvim-lsp-installer")
+    -- use("williamboman/nvim-lsp-installer")
     -- use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
     -- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
     -- use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
     -- use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
-     --    use({"neoclide/coc.nvim", branch = "release", run = "yarn install --frozen-lockfile"})
+    --    use({"neoclide/coc.nvim", branch = "release", run = "yarn install --frozen-lockfile"})
 
     use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v1.x',
-      requires = {
-        -- LSP Support
-        {'neovim/nvim-lspconfig'},             -- Required
-        {'williamboman/mason.nvim'},           -- Optional
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        requires = {
+            -- LSP Support
+            { 'neovim/nvim-lspconfig' },       -- Required
+            { 'williamboman/mason.nvim' },     -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},         -- Required
-        {'hrsh7th/cmp-nvim-lsp'},     -- Required
-        {'hrsh7th/cmp-buffer'},       -- Optional
-        {'hrsh7th/cmp-path'},         -- Optional
-        {'saadparwaiz1/cmp_luasnip'}, -- Optional
-        {'hrsh7th/cmp-nvim-lua'},     -- Optional
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },   -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'hrsh7th/cmp-buffer' }, -- Optional
+            { 'hrsh7th/cmp-path' },   -- Optional
+            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+            { 'hrsh7th/cmp-nvim-lua' }, -- Optional
 
-        -- Snippets
-        {'L3MON4D3/LuaSnip'},             -- Required
-        {'rafamadriz/friendly-snippets'}, -- Optional
-      }
+            -- Snippets
+            { 'L3MON4D3/LuaSnip' },       -- Required
+            { 'rafamadriz/friendly-snippets' }, -- Optional
+        }
     }
-    
+
     -- formatting & linting
     use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-    use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+    use("jayp0521/mason-null-ls.nvim")     -- bridges gap b/w mason & null-ls
 
     -- treesitter configuration
     use({
         "nvim-treesitter/nvim-treesitter",
         run = function()
-             require("nvim-treesitter.install").update({ with_sync = true })
+            require("nvim-treesitter.install").update({ with_sync = true })
         end
     })
+    use("nvim-treesitter/nvim-treesitter-context");
 
     -- auto closing
-    use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+    use("windwp/nvim-autopairs")                                 -- autoclose parens, brackets, quotes, etc...
     use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
     -- git integration
@@ -181,12 +183,15 @@ return packer.startup(function(use)
 
     -- use {
     --     "folke/which-key.nvim",
-    --     config = function () 
+    --     config = function ()
     --         require("which-key").setup()
     --     end
     -- }
 
     use("vifm/vifm.vim")
+
+    use("mattn/emmet-vim")
+    use("ap/vim-css-color")
 
     if packer_bootstrap then
         require("packer").sync()
