@@ -74,6 +74,7 @@ return packer.startup(function(use)
     use("vim-scripts/kiss.vim")
     use("kwsp/halcyon-neovim")
     use("teloe/bland.vim")
+<<<<<<< HEAD
     use("perfectspr/dracula-vim")
     -- monochrome
     use("owickstrom/vim-colors-paramount")
@@ -81,6 +82,9 @@ return packer.startup(function(use)
     use("n1ghtmare/noirblaze-vim")
     use("axvr/photon.vim")
     use { "https://git.sr.ht/~toastal/sugilite256", branch = "trunk", rtp = "vim" }
+=======
+    -- use("perfectspr/dracula-vim")
+>>>>>>> 134c799 (wip)
     -- < colorshemes
 
     use("szw/vim-maximizer") -- maximizes and restores current window
