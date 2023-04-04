@@ -6,8 +6,8 @@ local lsp = require('lsp-zero').preset({
 })
 
 lsp.ensure_installed({
-    "pylsp",
-    -- "pyright",
+    -- "pylsp",
+    "pyright",
     -- "tsserver",
     "yamlls",
     "taplo",

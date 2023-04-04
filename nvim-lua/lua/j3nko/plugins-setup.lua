@@ -26,12 +26,20 @@ return packer.startup(function(use)
 
     use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
     -- use("github/copilot.vim")
-    use("xolox/vim-misc")
-    use("xolox/vim-colorscheme-switcher")
+    -- use("xolox/vim-misc")
+    -- use("xolox/vim-colorscheme-switcher")
     use("tpope/vim-fugitive")
+    use {
+        'xolox/vim-colorscheme-switcher',
+        requires = {
+            { 'xolox/vim-misc' }
+        }
+    }
+
+    use("kshenoy/vim-signature")
 
     -- multi cursor
-    use("mg979/vim-visual-multi")
+    -- use("mg979/vim-visual-multi")
 
     use("airblade/vim-gitgutter")
     use("mbbill/undotree")
@@ -40,32 +48,31 @@ return packer.startup(function(use)
     use("ThePrimeagen/harpoon")
 
     -- colorshemes
-    use("EdenEast/nightfox.nvim")
+    -- use("EdenEast/nightfox.nvim")
 
-    use("folke/tokyonight.nvim")
+    -- use("folke/tokyonight.nvim")
     use("bluz71/vim-moonfly-colors")
     use("dracula/vim")
-    use("sjl/badwolf")
-    use("jacoborus/tender.vim")
-    use("morhetz/gruvbox")
+    -- use("sjl/badwolf")
+    -- use("jacoborus/tender.vim")
+    -- use("morhetz/gruvbox")
     use { "https://gitlab.com/madyanov/gruber.vim", as = "madyanov-gruber-vim" }
     use { "nyoom-engineering/oxocarbon.nvim" }
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use("savq/melange")
+    -- use { "catppuccin/nvim", as = "catppuccin" }
+    -- use("savq/melange")
     use("nyoom-engineering/nyoom.nvim")
     use("Mofiqul/vscode.nvim")
-    use("marko-cerovac/material.nvim")
+    -- use("marko-cerovac/material.nvim")
     
     use("kamykn/dark-theme.vim")
     use("glortho/feral-vim")
     use("nucl1d3/ambiance-vim")
-    use("nanotech/jellybeans.vim")
-    use("Alvarocz/vim-fresh")
+    -- use("nanotech/jellybeans.vim")
+    -- use("Alvarocz/vim-fresh")
 
-    use("kamykn/dark-theme.vim")
-    use("glortho/feral-vim")
-    use("nucl1d3/ambiance-vim")
-    use("nanotech/jellybeans.vim")
+    -- use("kamykn/dark-theme.vim")
+    -- use("glortho/feral-vim")
+    -- use("nucl1d3/ambiance-vim")
 
     use("evilwaveforms/silenthill.vim")
     use("andreasvc/vim-256noir")
@@ -73,14 +80,15 @@ return packer.startup(function(use)
     use("conweller/endarkened.vim")
     use("vim-scripts/kiss.vim")
     use("kwsp/halcyon-neovim")
-    use("teloe/bland.vim")
-    use("perfectspr/dracula-vim")
+    -- use("teloe/bland.vim")
+    -- use("perfectspr/dracula-vim")
     -- monochrome
     use("owickstrom/vim-colors-paramount")
     use("fxn/vim-monochrome")
     use("n1ghtmare/noirblaze-vim")
     use("axvr/photon.vim")
     use { "https://git.sr.ht/~toastal/sugilite256", branch = "trunk", rtp = "vim" }
+    use { "https://gitea.h.j3nko.de/j3nko/clcreative-vim", branch = "master", rtp = "vim" }
     -- use("perfectspr/dracula-vim")
     -- < colorshemes
 
@@ -186,7 +194,7 @@ return packer.startup(function(use)
     use("towolf/vim-helm")
     use("fatih/vim-go")
 
-    use("LnL7/vim-nix")
+    -- use("LnL7/vim-nix")
 
     -- use {
     --     "folke/which-key.nvim",
@@ -197,8 +205,8 @@ return packer.startup(function(use)
 
     use("vifm/vifm.vim")
     use("mattn/emmet-vim")
-    use("ap/vim-css-color")
-    use("junegunn/goyo.vim")
+    -- use("ap/vim-css-color")
+    -- use("junegunn/goyo.vim")
 
     if packer_bootstrap then
         require("packer").sync()
