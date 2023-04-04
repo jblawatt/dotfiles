@@ -152,6 +152,7 @@ return packer.startup(function(use)
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },       -- Required
+            { 'tamago324/nlsp-settings.nvim' },
             { 'williamboman/mason.nvim' },     -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 

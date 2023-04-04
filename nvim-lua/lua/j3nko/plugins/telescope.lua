@@ -27,12 +27,13 @@ telescope.setup({
 telescope.load_extension("fzf")
 
 -- telescope
-vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
-vim.keymap.set("n", "<C-m>", "<cmd>Telescope marks<cr>") -- find files within current working directory, respects .gitignore
+vim.keymap.set("n", "<leader>fp", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
+vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<cr>") -- find files within current working directory, respects .gitignore
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
-vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
+vim.keymap.set("n", "<leader>fs", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+vim.keymap.set("n", "<leader>fc", "<cmd>Telescope commands<cr>")
 
 -- telescope git commands (not on youtube nvim video)
 vim.keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
@@ -40,5 +41,4 @@ vim.keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list gi
 vim.keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
-vim.keymap.set("n", "<C-c>", "<cmd>Telescope commands<cr>")
 --  vim.api.nvim_create_user_command("Colors", "<cmd>Telescope colorschemes<cr>")
