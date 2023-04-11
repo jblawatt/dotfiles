@@ -13,6 +13,7 @@ require("j3nko.plugins.treesitter")
 require("j3nko.plugins.nvim-cmp")
 require("j3nko.plugins.lualine")
 require("j3nko.plugins.telescope")
+-- require("j3nko.plugins.dap")
 
 -- require("j3nko.plugins.coc")
 require("j3nko.plugins.lsp")
