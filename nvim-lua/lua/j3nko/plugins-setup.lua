@@ -38,6 +38,16 @@ return packer.startup(function(use)
         }
     }
 
+    -- -- breaks gd
+    -- use {
+    --     "folke/which-key.nvim",
+    --     config = function()
+    --         vim.o.timeout = true
+    --         vim.o.timeoutlen = 300
+    --         require("which-key").setup()
+    --     end
+    -- }
+
     use("kshenoy/vim-signature")
 
     -- multi cursor
@@ -128,6 +138,7 @@ return packer.startup(function(use)
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
             "MunifTanjim/nui.nvim",
+            "s1n7ax/nvim-window-picker",
         },
         config = function()
             require("neo-tree").setup({
@@ -136,6 +147,7 @@ return packer.startup(function(use)
                     statusbar = false,
                 }
             })
+            require 'window-picker'.setup()
         end
     }
 
@@ -265,9 +277,11 @@ return packer.startup(function(use)
     -- use("LnL7/vim-nix")
 
     use {
-        "folke/which-key.nvim",
+        'akinsho/bufferline.nvim',
+        tag = "v3.*",
+        requires = 'nvim-tree/nvim-web-devicons',
         config = function()
-            require("which-key").setup()
+            require("bufferline").setup {}
         end
     }
 
