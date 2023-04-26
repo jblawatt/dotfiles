@@ -12,8 +12,8 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "lunar"
--- lvim.colorscheme = "moonfly"
-lvim.colorscheme = "material"
+lvim.colorscheme = "moonfly"
+-- lvim.colorscheme = "material"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -191,6 +191,7 @@ lvim.plugins = {
     },
     ft = { "fugitive" }
   },
+  { "mattn/emmet-vim" },
   {
     "kevinhwang91/rnvimr",
     cmd = "RnvimrToggle",

@@ -57,9 +57,8 @@ in
     npkgs.platformio
     # npkgs.syncthing
     npkgs.helix
-    npkgs.qutebrowser
     npkgs.picocom
-    npkgs.mqttui
+    npkgs.mosquitto
     npkgs.terraform
     npkgs.kicad
     # npkgs.neovim
@@ -67,12 +66,16 @@ in
     # npkgs.zsh
     npkgs.direnv
     npkgs.zoxide
+    npkgs.lnav
     # npkgs.nodejs
     # npkgs.yarn
 
     npkgs.kubectl
     npkgs.kubectx
     npkgs.kubecolor
+    npkgs.kubeseal
+    npkgs.kubeval
+    npkgs.krew
     npkgs.kubernetes-helm
     npkgs.kustomize
     npkgs.kind
@@ -85,6 +88,12 @@ in
     npkgs.htop
     npkgs.drone-cli
     npkgs.starship
+    npkgs.restic
+
+    npkgs.poetry
+    npkgs.kops
+
+    npkgs.minio-client
     
     # npkgs.direnv
 
