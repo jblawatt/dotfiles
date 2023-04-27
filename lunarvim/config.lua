@@ -172,6 +172,31 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+  -- You must install glow globally
+  -- https://github.com/charmbracelet/glow
+  -- yay -S glow
+  {
+    "npxbr/glow.nvim",
+    ft = { "markdown" }
+    -- run = "yay -S glow"
+  },
+   -- {
+   --   "Pocco81/auto-save.nvim",
+   --   config = function()
+   --     require("auto-save").setup()
+   --   end,
+   -- },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+    end
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function() require "lsp_signature".on_attach() end,
+  },
   {
     "tpope/vim-fugitive",
     cmd = {
@@ -201,14 +226,37 @@ lvim.plugins = {
       vim.g.rnvimr_bw_enable = 1
     end,
   },
+  { "towolf/vim-helm" },
+  { "mattn/emmet-vim" },
+  { "glench/vim-jinja2-syntax" },
+  { "vim-test/vim-test" },
+
+  -- {{{ colorschemes
   { "bluz71/vim-moonfly-colors" },
   { "Mofiqul/vscode.nvim" },
   { "rebelot/kanagawa.nvim" },
+  { "https://gitlab.com/madyanov/gruber.vim", as = "madyanov-gruber-vim" },
+  { "nyoom-engineering/oxocarbon.nvim" },
+  { "tjdevries/colorbuddy.nvim" },
+  {
+    "jesseleite/nvim-noirbuddy",
+    -- require('noirbuddy').setup {
+    config = function()
+      --   colors = {
+      --     primary = '#8E59D8',
+      -- }
+      --   },
+    end
+  },
+  { "kwsp/halcyon-neovim" },
   {
     "marko-cerovac/material.nvim",
     config = function()
     end
   },
+  -- }}} colorschemes
+
+  -- {{{ Extra DAP Config
   { "fatih/vim-go" },
   {
     "leoluz/nvim-dap-go",
@@ -217,6 +265,7 @@ lvim.plugins = {
     end
   },
   { "mfussenegger/nvim-dap-python", config = function() require "dap-python".setup("python") end }
+  -- }}} dapconfig
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
