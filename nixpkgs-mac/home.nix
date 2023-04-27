@@ -26,6 +26,11 @@ in
         upkgs.plantuml
         upkgs.hugo
         upkgs.gitlab-runner
+        upkgs.k9s
+        upkgs.kyverno
+        upkgs.kubecolor
+
+        upkgs.neovide
 #         upkgs.kitty
     ];    
 
