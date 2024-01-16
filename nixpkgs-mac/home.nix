@@ -29,8 +29,22 @@ in
         upkgs.k9s
         upkgs.kyverno
         upkgs.kubecolor
-
-        upkgs.neovide
+        upkgs.vifm
+        # upkgs.neovide
+        upkgs.kubecm
+#         upkgs.neovide
+        upkgs.lnav
+        upkgs.starship
+        upkgs.fossil
+        # pkgs.bitwarden
+        pkgs.pass
+        pkgs.micro
+        pkgs.black
+        pkgs.poppler
+        pkgs.kube-capacity
+        upkgs.trivy
+        upkgs.bun
+        upkgs.commitizen
 #         upkgs.kitty
     ];    
 

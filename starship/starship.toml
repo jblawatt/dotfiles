@@ -77,8 +77,8 @@ deleted = " "
 
 # Shows kubernetes context and namespace
 [kubernetes]
-format = 'via [ﴱ $context\($namespace\)](bold purple) '
-disabled = false
+format = 'via [ﴱ $user@$context\($namespace\)](bold purple) '
+disabled = true
 
 [fossil_branch]
 disabled = false

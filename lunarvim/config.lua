@@ -12,10 +12,13 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "lunar"
-lvim.colorscheme = "moonfly"
+-- lvim.colorscheme = "moonfly"
+-- lvim.colorscheme = "halcyon"
+lvim.colorscheme = "lunaperche"
 -- lvim.colorscheme = "material"
+-- lvim.colorscheme = "paramount-ng"
 -- to disable icons and use a minimalist setup, uncomment the following
--- lvim.use_icons = false
+lvim.use_icons = true
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -27,6 +30,20 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
+
+
+lvim.keys.normal_mode["<M-j>"] = false
+lvim.keys.normal_mode["<M-k>"] = false
+
+-- Add vim-test bindings
+lvim.keys.normal_mode["<leader>tn"] = ":TestNearest<CR>"
+lvim.keys.normal_mode["<leader>tf"] = ":TestFile<CR>"
+lvim.keys.normal_mode["<leader>ts"] = ":TestSuite<CR>"
+lvim.keys.normal_mode["<leader>tv"] = ":TestVisit<CR>"
+lvim.keys.normal_mode["<leader>tl"] = ":TestLast<CR>"
+
+-- lvim.keys.normal_mode["<leader>e"] = ":NeoTreeShow<CR>"
+-- lvim.keys.normal_mode["<leader>ef"] = ":NeoTreeFloat<CR>"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -67,8 +84,12 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
+lvim.builtin.project.active = false
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+-- lvim.builtin.nvimtree.setup.sync_root_with_cwd = false
+
+lvim.builtin.telescope.theme = "ivy"
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -86,8 +107,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
 }
-
-lvim.builtin.treesitter.ignore_install = { "haskell" }
+lvim.builtin.treesitter.ignore_install = { "haskell", "vimdoc" }
 lvim.builtin.treesitter.highlight.enable = true
 
 -- generic LSP settings
@@ -180,12 +200,36 @@ lvim.plugins = {
     ft = { "markdown" }
     -- run = "yay -S glow"
   },
-   -- {
-   --   "Pocco81/auto-save.nvim",
-   --   config = function()
-   --     require("auto-save").setup()
-   --   end,
-   -- },
+  {"mbbill/undotree"},
+  {
+    "vifm/vifm.vim"
+  },
+  -- {
+  --   "Pocco81/auto-save.nvim",
+  --   config = function()
+  --     require("auto-save").setup()
+  --   end,
+  -- },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  },
+  {
+    "nvim-pack/nvim-spectre",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+      require("spectre").setup {
+      }
+    end
+  },
+  { "christoomey/vim-tmux-navigator" }, -- tmux & split window navigation
   {
     "simrat39/symbols-outline.nvim",
     config = function()
@@ -216,7 +260,6 @@ lvim.plugins = {
     },
     ft = { "fugitive" }
   },
-  { "mattn/emmet-vim" },
   {
     "kevinhwang91/rnvimr",
     cmd = "RnvimrToggle",
@@ -232,28 +275,40 @@ lvim.plugins = {
   { "vim-test/vim-test" },
 
   -- {{{ colorschemes
+  { "rose-pine/neovim",                             name = "rose-pine" },
+  { "mcchrish/zenbones.nvim" },
   { "bluz71/vim-moonfly-colors" },
   { "Mofiqul/vscode.nvim" },
+  { "frenzyexists/aquarium-vim" },
   { "rebelot/kanagawa.nvim" },
-  { "https://gitlab.com/madyanov/gruber.vim", as = "madyanov-gruber-vim" },
+  { url = "https://gitlab.com/madyanov/gruber.vim", name = "madyanov-gruber-vim" },
   { "nyoom-engineering/oxocarbon.nvim" },
   { "tjdevries/colorbuddy.nvim" },
-  {
-    "jesseleite/nvim-noirbuddy",
-    -- require('noirbuddy').setup {
-    config = function()
-      --   colors = {
-      --     primary = '#8E59D8',
-      -- }
-      --   },
-    end
-  },
+  --   {
+  --     "jesseleite/nvim-noirbuddy",
+  --     config = function()
+  --       -- require('noirbuddy').setup {
+  --       --   colors = {
+  --       --     primary = '#8E59D8',
+  --       -- }
+  --       --   },
+  --     end
+  --   },
   { "kwsp/halcyon-neovim" },
+  -- { "rainglow/vim" },
+  {
+    "chrsm/paramount-ng.nvim",
+    dependencies = { "rktjmp/lush.nvim" }
+  },
   {
     "marko-cerovac/material.nvim",
     config = function()
     end
   },
+  { "folke/tokyonight.nvim", },
+  { "bluz71/vim-nightfly-colors" },
+  { "savq/melange-nvim" },
+  { "uloco/bluloco.nvim" },
   -- }}} colorschemes
 
   -- {{{ Extra DAP Config
@@ -266,7 +321,55 @@ lvim.plugins = {
   },
   { "mfussenegger/nvim-dap-python", config = function() require "dap-python".setup("python") end }
   -- }}} dapconfig
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   branch = "v2.x",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-tree/nvim-web-devicons",
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  --   config = function()
+  --     require("neo-tree").setup({
+  --       close_if_last_window = true,
+  --       window = {
+  --         width = 30,
+  --       },
+  --       buffers = {
+  --         follow_current_file = true,
+  --       },
+  --       filesystem = {
+  --         follow_current_file = true,
+  --         filtered_items = {
+  --           hide_dotfiles = false,
+  --           hide_gitignored = false,
+  --           hide_by_name = {
+  --             "node_modules"
+  --           },
+  --           never_show = {
+  --             ".DS_Store",
+  --             "thumbs.db"
+  --           },
+  --         },
+  --       },
+  --     })
+  --   end
+  -- }
 }
+
+-- lvim.builtin.nvimtree.active = false -- NOTE: using neo-tree
+lvim.builtin.nvimtree.setup.view.width = 50
+-- lvim.builtin.nvimtree.setup.view.float.enable = true
+lvim.builtin.nvimtree.setup.hijeck_cursor = false
+-- lvim.builtin.nvimtree.setup.sync_root_with_cwd = true
+-- lvim.builtin.nvimtree.setup.update_focused_file.update_root = false
+
+
+if vim.g.neovide then
+  -- vim.o.guifont = "Iosevka NFM:h12"
+  vim.o.guifont = "Lilex NFM:h13"
+  -- vim.o.guifont = "DaddyTimeMono NFM:h16"
+end
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {

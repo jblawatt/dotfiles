@@ -1,15 +1,94 @@
 
-import:
-  - ~/.config/alacritty/alacritty-theme/themes/ayu_dark.yaml
+# https://alacritty.org/config-alacritty.html
+
+import: []
+  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/pencil_dark.yaml
+  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/xterm.yaml
+  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/base16_default_dark.yaml
+  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/monokai_pro.yaml
+  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/github_light.yaml
+  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/carbonfox.yaml
+  # - /Users/jblawatt/.config/alacritty/base16-material-darker.yml
+  # - /Users/jblawatt/.config/alacritty/base16-material-darker.yml
+  # - /Users/jblawatt/.config/alacritty/alacritty-rose-pine/dist/rose-pine.yml
+  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/cyber_punk_neon.yaml alt_send_esc: false
 
 font:
   normal:
     # family: mononoki Nerd Font Mono
+    # family: Hasklug Nerd Font Mono
     # family: mplus NFM
     # family: monospace
-    # family: Iosevka Term
-    family: JetBrainsMono Nerd Font Mono
-      # style: Regular
-    style: Bold
+    # family: Lilex NFM
+    # family: DejaVuSansMono Nerd Font Mono
+    # family: Cousine Nerd Font Mono
+    # family:  Nerd Font Mono
+    # family: Anonymice Nerd Font Mono
+    # family: iMWritingMonoS NFM
+    # family: UbuntuMono NFM
+    # family: BigBlue_Terminal_437TT NF
+    # family: SF Mono
+    # family: CodeNewRoman NFM
+    # family: Monoid Nerd Font
+    # family: SpaceMono Nerd Font
+    # family: FantasqueSansMono Nerd Font
+    # family: DejaVuSansMono NF
+    # family: FiraMono Nerd Font
+    # family: EnvyCodeR Nerd Font
+    # family: Iosevka Nerd Font
+    family: IosevkaTermSlab Nerd Font
+    # family: 0xProto Nerd Font
+    # family: GeistMono Nerd Font
+    # family: MartianMono Nerd Font
+    # family: IntoneMono Nerd Font
+    # family: JetBrainsMono Nerd Font Mono
+    # family: PT Mono
+    # family: BlexMono NFM
+    # family: SpaceMono Nerd Font
+    # family: AurulentSansMono NFM
+
+    # style: Book
+    # style: Light
+    style: Regular
+    # style: Condensed Regular
 
   size: 14.0
+
+window:
+  opacity: 0.95
+  padding:
+    x: 6
+    y: 6
+
+cursor:
+  style: 
+    shape: Block
+    blinking: On
+
+colors:
+
+  primary:
+    background: '#000000'
+    # foreground: white
+
+  normal:
+    black: '#1A1A1A'
+    blue: '#5c78ff'
+    cyan: '#5ac8ff'
+    green: '#905aff'
+    magenta: '#5ea2ff'
+    red: '#ba5aff'
+    white: '#ffffff'
+    yellow: '#657b83'
+    gray: '#171717'
+  
+  bright:
+    black: '#666666'
+    blue: '#2b4fff'
+    cyan: '#28b9ff'
+    green: '#7129ff'
+    magenta: '#2883ff'
+    red: '#a52aff'
+    white: '#f1f1f1'
+    yellow: '#3d2aff'
+    gray: '#1d1d1d'
