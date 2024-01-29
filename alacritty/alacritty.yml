@@ -1,8 +1,9 @@
 
 # https://alacritty.org/config-alacritty.html
 
-import: []
-  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/pencil_dark.yaml
+import:
+  - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/monokai_charcoal.yaml
+  # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/papertheme.yaml
   # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/xterm.yaml
   # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/base16_default_dark.yaml
   # - /Users/jblawatt/.config/alacritty/alacritty-theme/themes/monokai_pro.yaml
@@ -19,12 +20,13 @@ font:
     # family: Hasklug Nerd Font Mono
     # family: mplus NFM
     # family: monospace
-    # family: Lilex NFM
+    family: Lilex NFM
     # family: DejaVuSansMono Nerd Font Mono
     # family: Cousine Nerd Font Mono
     # family:  Nerd Font Mono
     # family: Anonymice Nerd Font Mono
     # family: iMWritingMonoS NFM
+    # family: CaskaydiaCove Nerd Font
     # family: UbuntuMono NFM
     # family: BigBlue_Terminal_437TT NF
     # family: SF Mono
@@ -36,11 +38,12 @@ font:
     # family: FiraMono Nerd Font
     # family: EnvyCodeR Nerd Font
     # family: Iosevka Nerd Font
-    family: IosevkaTermSlab Nerd Font
+    # family: IosevkaTermSlab Nerd Font
     # family: 0xProto Nerd Font
     # family: GeistMono Nerd Font
     # family: MartianMono Nerd Font
     # family: IntoneMono Nerd Font
+    # family: CommitMono Nerd Font
     # family: JetBrainsMono Nerd Font Mono
     # family: PT Mono
     # family: BlexMono NFM
@@ -49,13 +52,13 @@ font:
 
     # style: Book
     # style: Light
-    style: Regular
+    # style: Regular
     # style: Condensed Regular
 
-  size: 14.0
+  size: 13.0
 
 window:
-  opacity: 0.95
+  opacity: 1.0
   padding:
     x: 6
     y: 6
@@ -65,30 +68,30 @@ cursor:
     shape: Block
     blinking: On
 
-colors:
-
-  primary:
-    background: '#000000'
-    # foreground: white
-
-  normal:
-    black: '#1A1A1A'
-    blue: '#5c78ff'
-    cyan: '#5ac8ff'
-    green: '#905aff'
-    magenta: '#5ea2ff'
-    red: '#ba5aff'
-    white: '#ffffff'
-    yellow: '#657b83'
-    gray: '#171717'
-  
-  bright:
-    black: '#666666'
-    blue: '#2b4fff'
-    cyan: '#28b9ff'
-    green: '#7129ff'
-    magenta: '#2883ff'
-    red: '#a52aff'
-    white: '#f1f1f1'
-    yellow: '#3d2aff'
-    gray: '#1d1d1d'
+# colors:
+# 
+#   primary:
+#     background: '#000000'
+#     # foreground: white
+# 
+#   normal:
+#     black: '#1A1A1A'
+#     blue: '#5c78ff'
+#     cyan: '#5ac8ff'
+#     green: '#905aff'
+#     magenta: '#5ea2ff'
+#     red: '#ba5aff'
+#     white: '#ffffff'
+#     yellow: '#657b83'
+#     gray: '#171717'
+#   
+#   bright:
+#     black: '#666666'
+#     blue: '#2b4fff'
+#     cyan: '#28b9ff'
+#     green: '#7129ff'
+#     magenta: '#2883ff'
+#     red: '#a52aff'
+#     white: '#f1f1f1'
+#     yellow: '#3d2aff'
+#     gray: '#1d1d1d'
